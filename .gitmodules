@@ -1,0 +1,3 @@
+[submodule "server/usr/share/autoinstall/lib/spyc"]
+	path = server/usr/share/autoinstall/lib/spyc
+	url = https://github.com/mustangostang/spyc
