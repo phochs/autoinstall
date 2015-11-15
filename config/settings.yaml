@@ -1,0 +1,38 @@
+listen:		[10.0.0.0/16, 192.168.1.1]
+
+groups:
+	-
+	 name:			base
+	 description:	The things every machine needs
+	 software:
+	  - +vim
+	  - +utils
+	  - +sysrotation
+	-
+	 name:			servers
+	 description:	All the servers
+	 inherit:
+	  - base
+	 software:
+	  - +fail2ban
+	  - -vim
+	-
+	 name:			desktops
+	 description:	Desktop computers
+	 inherit:
+	  - base
+
+computers:
+	-
+	 name:			zeus
+	 groups:
+	  - desktops
+	 ip:			10.2.0.50 #Optional, so it only sends information for this computer to the specified IP address
+	-
+	 name:			Acropolis
+	 groups:
+	  - servers
+	 software:
+	  - +phpsysinfo
+	  - +webserver
+	  - -fail2ban

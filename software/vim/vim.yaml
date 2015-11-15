@@ -1,0 +1,14 @@
+description:	A superb CLI text editor
+
+versions:
+	-
+	 description:		initial version
+	 repositories:
+	  - +inc
+	 packages:
+	  - +inc1
+	  - +inc2
+	  - -excl1
+	  - -excl2
+	 scripts:
+	  install: "installv1.sh"
