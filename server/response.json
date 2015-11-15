@@ -1,0 +1,59 @@
+{
+	"version": "0.1dev",
+	"host": "Acro-misc",
+	"code":	"0", #0=succes, 1=fail (with message attribute)
+	"software": {
+		"QGis": {
+			"status": "install",
+			"description": "Too lazy to type that now...",
+			"updates": [
+				{
+					"description": "initial version",
+					"repositories": {
+						"included": null,
+						"excluded": null
+					},
+					"packages": {
+						"included": ["qgis-common", "qgis"],
+						"excluded": null
+					}
+					"scripts": {
+						"install": false,
+						"update": false,
+						"remove": false
+					}
+				}
+			]
+		},
+		"vlc": {
+			"status": "remove",
+			"description": "An awesome video player!",
+			"updates": [
+				{
+					"description": "first",
+					"repositories": {
+						"included": null,
+						"excluded": null
+					},
+					"packages": {
+						"included": ["vlc"],
+						"excluded": null
+					}
+					"scripts": {
+						"install": false,
+						"update": false,
+						"remove": false
+					}
+				}
+			]
+		}
+	}
+}
+
+request:
+http://10.2.0.2x:8080/autoinstall/REST?type=json&action=list&computer=zeus
+
+/etc/autoinstall:
+	settings.yaml: defines groups and users.
+/etc/autoinstall/software/[name]:
+	[name].yaml: defines versions and the repos and packages inside them
