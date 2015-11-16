@@ -15,8 +15,8 @@
      *  - Get the location of the script
      *  - Return the contents of the file
      */
-    require('config.php');
-    require_once('lib/spyc/Spyc.php');
+    define('VERSION', '0.1dev');
+    require('../include.php');
     $response = array();
     $response['version'] = '0.1dev';
     $response['host'] = 'NYI';
